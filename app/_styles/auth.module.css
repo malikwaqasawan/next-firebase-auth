@@ -1,0 +1,9 @@
+.authWrapper{
+  @apply flex flex-col items-center justify-center lg:w-[85%] xl:ms-auto m-auto
+}
+.authHeader{
+  @apply lg:text-center mb-6 lg:mx-auto me-auto
+}
+.authHeading{
+  @apply lg:text-h2 lg:mb-3 text-black
+}

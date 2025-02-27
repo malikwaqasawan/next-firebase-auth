@@ -1,0 +1,113 @@
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  @apply text-base;
+}
+body{
+  background-color: #FFFCFC;
+}
+h1{
+  @apply text-h1 font-bold leading-[56px]
+}
+h2{
+  @apply lg:text-h2 text-lg-h2 font-semibold leading-[42px]
+}
+h3{
+  @apply text-h3 font-bold leading-[32px]
+}
+h4{
+  @apply text-h4 font-bold leading-[28px]
+}
+h6{
+  @apply text-h6 leading-[14px]
+}
+.text-sm{
+  @apply leading-4
+}
+
+.eb-font{
+  font-family: "EB Garamond", serif;
+}
+label{
+  @apply text-xs text-label mb-1 block
+}
+input{
+  @apply border rounded-[4px] py-[11px] px-3 w-full text-h6 focus:outline-none border-gray-300 rounded
+}
+input::placeholder{
+  @apply text-h6 text-disable leading-5
+}
+.btn{
+  @apply py-3 px-8 rounded-xl text-base font-bold leading-6 border border-primary text-inherit text-primary
+}
+.btn-sm{
+  @apply border border-primary rounded-full px-4 py-2 text-[10px]
+}
+.btn-primary{
+  @apply bg-primary !text-secondary
+}
+.btn-secondary{
+  @apply bg-secondary !text-primary border-primary
+}
+section{
+  @apply mb-[64px]
+}
+.container{
+  @apply px-6
+}
+
+.btn:disabled {
+  @apply bg-[#8BABA7] text-gray-700 cursor-not-allowed;
+}
+
+.btn, .btn-sm{
+  cursor: pointer;
+}
+@media(max-width: 991px){
+  .tab-active{
+    filter: brightness(0) saturate(100%) invert(19%) sepia(86%) saturate(2863%) hue-rotate(163deg) brightness(93%) contrast(98%)
+  }
+  .not-active{
+    filter: brightness(0) saturate(100%) invert(99%) sepia(38%) saturate(4542%) hue-rotate(332deg) brightness(110%) contrast(89%)
+  }
+}
+@media (max-width: 767px) {
+  .text-h1, h1 {
+    @apply text-lg-h1 leading-[42px]; 
+  }
+  .text-h2, h2 {
+    @apply text-lg-h2 leading-8; 
+  }
+  h3, .text-h3 {
+    @apply text-lg-h3 leading-6; 
+  }
+  h4, .text-h4{
+    @apply text-lg-h4; 
+  }
+  .text-base{
+    @apply text-lg-base;
+  }
+  h6, .text-h6{
+    @apply text-lg-h6
+  }
+  .text-sm{
+    @apply text-lg-sm leading-3 text-inherit
+  }
+  section{
+    @apply mb-[56px]
+  }
+}

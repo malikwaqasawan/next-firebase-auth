@@ -1,0 +1,9 @@
+.header{
+  @apply lg:bg-highlight-base bg-primary lg:py-[26px] py-6 lg:rounded-none rounded-b-[20px]
+}
+.navWrapper{
+  @apply flex lg:justify-between justify-end items-center 
+}
+.buttonsWrapper{
+  @apply lg:block hidden
+}
